@@ -1,4 +1,5 @@
 package com.raywenderlich.android.cheesefinder
+
 /*
  * Copyright (c) 2019 Razeware LLC
  *
@@ -70,8 +71,10 @@ class SplashActivity : AppCompatActivity() {
     requestWindowFeature(Window.FEATURE_NO_TITLE)
 
     // Make Fullscreen
-    window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-        WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    window.setFlags(
+      WindowManager.LayoutParams.FLAG_FULLSCREEN,
+      WindowManager.LayoutParams.FLAG_FULLSCREEN
+    )
 
     // Hide the toolbar
     supportActionBar?.hide()

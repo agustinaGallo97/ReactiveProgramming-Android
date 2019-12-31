@@ -98,13 +98,13 @@ abstract class BaseSearchActivity : AppCompatActivity() {
       database.insertAll(cheeseList)
 
     }.toFlowable()
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
-        .doOnComplete {
-          Toast.makeText(context, context.getString(R.string.success), Toast.LENGTH_LONG).show()
-        }
-        .doOnError {
-          Toast.makeText(context, context.getString(R.string.error_inserting_cheeses), Toast.LENGTH_LONG).show()
-        }
+      .subscribeOn(Schedulers.io())
+      .observeOn(AndroidSchedulers.mainThread())
+      .doOnComplete {
+        Toast.makeText(context, context.getString(R.string.success), Toast.LENGTH_LONG).show()
+      }
+      .doOnError {
+        Toast.makeText(context, context.getString(R.string.error_inserting_cheeses), Toast.LENGTH_LONG).show()
+      }
   }
 }
